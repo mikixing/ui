@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css27种图形</title>
+	<style>
+		.box {
+			padding: 20px;
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+		.square {
+			width: 100px;
+			height: 100px;
+			background: #00ffb9;
+		}
+		.rectangle {
+			width: 100px;
+			height: 50px;
+			background: red;
+		}
+		.circle {
+			width: 100px;
+			height: 100px;
+			background: red;
+			border-radius: 100%;
+		}
+		.oval {
+			width: 100px;
+			height: 50px;
+			background: #eae0e0;
+			border-radius: 50%;
+		}
+		.triangle-up {
+			width: 0;
+			height: 0;
+			border-bottom: 50px solid red;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+		}
+		.triangle-down {
+			width: 0;
+			height: 0;
+			border-top: 50px solid red;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+		}
+		.triangle-left {
+			width: 0;
+			height: 0;
+			border-top: 50px solid transparent;
+			border-bottom: 50px solid transparent;
+			border-left: 50px solid red;
+		}
+		.triangle-right {
+			width: 0;
+			height: 0;
+			border-top: 50px solid transparent;
+			border-bottom: 50px solid transparent;
+			border-right: 50px solid red;
+		}
+		.triangle-left-up {
+			width: 0;
+			height: 0;
+			border-top: 50px solid #00ff14;
+			border-right: 50px solid transparent;
+		}
+		.triangle-left-down {
+			width: 0;
+			height: 0;
+			border-bottom: 50px solid #0089ff;
+			border-right: 50px solid transparent;
+		}
+		.triangle-right-up {
+			width: 0;
+			height: 0;
+			border-top: 50px solid #ff00f7;
+			border-left: 50px solid transparent;
+		}
+		.triangle-right-down {
+			width: 0;
+			height: 0;
+			border-bottom: 50px solid #00ff14;
+			border-left: 50px solid transparent;
+		}
+		.Parallelogram {
+			width: 100px;
+			height: 100px;
+			background: #ff4700;
+			transform: skew(15deg);
+		}
+		.Trapezoid {
+			width: 50px;
+			border-bottom: 50px solid #5fd6db;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+		}
+		.Hexagonal-star {
+			position: relative;
+			margin-left: 50px;
+		}
+		.Hexagonal-star>div {
+			background: #ffbd00;
+		}
+		.Hexagonal-star-one {
+			position: absolute;
+		    width: 20px;
+		    height: 20px;
+		    transform: rotate(-15deg) skew(60deg, 60deg);
+		}
+		.Hexagonal-star-two {
+			position: absolute;
+			width: 20px;
+		    height: 20px;
+		   	transform: rotate(45deg) skew(60deg, 60deg);
+		}
+		.Hexagonal-star-three {
+			position: absolute;
+		    width: 20px;
+		    height: 20px;
+			transform: rotate(105deg) skew(60deg, 60deg);
+		}
+		.star5 {
+			top: 10px;
+			position: relative;
+		}
+		.star5 .angle5 {
+			position: relative;
+			width: 50px;
+		    height: 0;
+		    border-top: 46.5px solid red;
+		    border-left: 15px solid transparent;
+    		border-right: 15px solid transparent;
+		}
+		.star5-one {
+			width: 0;
+		    height: 0;
+		    border-bottom: 50px solid red;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    position: absolute;
+		    top: 46px;
+		    left: 15px;
+		    transform: rotate(180deg);
+		}
+		.star5-two {
+			width: 0;
+		    height: 0;
+		    border-bottom: 50px solid red;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    transform: rotate(253deg);
+		    position: absolute;
+		    left: -41px;
+		    top: 6px;
+		}
+		.star5-three {
+			width: 0;
+		    height: 0;
+		    border-bottom: 50px solid red;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    transform: rotate(108deg);
+		    position: absolute;
+		    left: 71px;
+		    top: 6px;
+		}
+		.star5-four {
+			width: 0;
+		    height: 0;
+		    border-bottom: 50px solid red;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    transform: rotate(-36deg);
+		    position: absolute;
+		    left: -18px;
+		    top: -58px;
+		}
+		.star5-five {
+			width: 0;
+		    height: 0;
+		    border-bottom: 50px solid red;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    transform: rotate(397deg);
+		    position: absolute;
+		    left: 49px;
+		    top: -59px;
+		}
+		.angle5 {
+			position: relative;
+			width: 50px;
+		    height: 0;
+		    border-top: 46.5px solid red;
+		    border-left: 15px solid transparent;
+    		border-right: 15px solid transparent;
+		}
+		.angle5:before {
+			left: -15px;
+		    top: -76px;
+		    position: absolute;
+		    content: '';
+		    display: block;
+		    border-bottom: 30px solid red;
+		    border-left: 40px solid transparent;
+		    border-right: 40px solid transparent;
+		}
+		.hexagon {
+			width: 50px;
+			height: 86px;
+			background: red;
+			position: absolute;
+		}
+		.hexagon:before {
+			content: '';
+			width: 50px;
+			height: 86px;
+			background: red;
+			position: absolute;
+			transform: rotate(60deg);
+		}
+		.hexagon:after {
+			content: '';
+			width: 50px;
+			height: 86px;
+			background: red;
+			transform: rotate(-60deg);
+			position: absolute;
+		}
+		.Octagon {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.Octagon-upl {
+			width: 0;
+			height: 0;
+			border-left: 25px solid #fff;
+			border-bottom: 25px solid transparent;
+			position: absolute;
+			top: 20px;
+		}
+		.Octagon-upr {
+			width: 0;
+			height: 0;
+			border-right: 25px solid #fff;
+			border-bottom: 25px solid transparent;
+			position: absolute;
+			top: 20px;
+    		right: 20px;
+		}
+		.Octagon-downl {
+			width: 0;
+			height: 0;
+			border-top: 25px solid transparent;
+			border-left: 25px solid #fff;
+			position: absolute;
+			top: 95px;
+		}
+		.Octagon-downr {
+			width: 0;
+			height: 0;
+			border-top: 25px solid transparent;
+			border-right: 25px solid #fff;
+			position: absolute;
+			top: 95px;
+			right: 20px;
+		}
+		.love {
+			position: relative;
+			width: 50px;
+			height: 50px;
+			background: red;
+			transform: rotate(45deg);		}
+		.love:before {
+			content: '';
+		    position: absolute;
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 100%;
+		    background: red;
+		    top: 0px;
+		    left: -25px;
+		}
+		.love:after {
+			content: '';
+		    position: absolute;
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 100%;
+		    background: red;
+		    top: -25px;
+		}
+		.egg {
+			width: 50px;
+			height: 100px;
+			background: red;
+			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+		}
+		.pac-man {
+			width: 0;
+			height: 0;
+			border-top: 50px solid yellow;
+			border-left: 50px solid red;
+			border-bottom: 50px solid green;
+			border-right: 50px solid transparent;
+			border-radius: 100%;
+		}
+		.dialog {
+			width: 100px;
+			height: 60px;
+			background: #ece3e3;
+			border-radius: 10px;
+			position: relative;
+		}
+		.dialog:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-right: 23px solid #ece3e3;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			position: absolute;
+			left: -23px;
+    		top: 20px;
+		}
+		.star-12 {
+			width: 50px;
+			height: 50px;
+			background: #ffb10082;
+			position: relative;
+		}
+		.star-12:before {
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: #ffb10082;
+			position: absolute;
+			transform: rotate(30deg);
+		}
+		.star-12:after {
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: #ffb10082;
+			position: absolute;
+			transform: rotate(-30deg);
+		}
+		.star-8 {
+			width: 50px;
+			height: 50px;
+			background: #ffb10082;
+			position: relative;
+		}
+		.star-8:before {
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: #ffb10082;
+			position: absolute;
+			transform: rotate(45deg);
+		}
+		.diamond {
+			width: 0;
+		    height: 0;
+		    border-top: 70px solid #ffb10082;
+		    border-left: 45px solid transparent;
+		    border-right: 45px solid transparent;
+		    position: relative;
+		}
+		.diamond:before {
+			content: '';
+		    width: 40px;
+		    height: 0;
+		    position: absolute;
+		    border-left: 25px solid transparent;
+		    border-right: 25px solid transparent;
+		    border-bottom: 30px solid #ffb10082;
+		    top: -100px;
+		    left: -45px;
+		}
+		.tj {
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			background: black;
+			position: relative;
+		}
+		.tj:before {
+			content: '';
+			border-bottom: 48px solid #EEEEEE;
+			border-right: 48px solid #EEEEEE;
+			border-left: 48px solid transparent;
+			border-top: 48px solid transparent;
+			position: absolute;
+			border-radius: 100%;
+			top: 2px;
+    		left: 2px;
+		}
+		.eye-w {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			background: #fff;
+			position: absolute;
+			z-index: 10;
+			left: 89px;
+    		top: 54px;
+		}
+		.eye-b {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			background: black;
+			position: absolute;
+			z-index: 10;
+			top: 77px;
+    		left: 42px;
+		}
+		.tj-circle1 {
+			width: 0;
+		    height: 0;
+		    border-top: 24px solid black;
+		    border-left: 24px solid black;
+		    border-bottom: 24px solid transparent;
+		    border-right: 24px solid transparent;
+		    border-radius: 100%;
+		    position: absolute;
+		    left: 62px;
+		    top: 28px;
+		    transform: rotate(180deg);
+		}
+		.tj-circle2 {
+			content: '';
+		    width: 0;
+		    height: 0;
+		    border-top: 24px solid #EEEEEE;
+		    border-left: 24px solid #EEEEEE;
+		    border-bottom: 24px solid transparent;
+		    border-right: 24px solid transparent;
+		    border-radius: 100%;
+		    position: absolute;
+		    top: 65px;
+		    left: 31px;
+		}
+		/*.tj-box {
+			transform-origin: 70px 70px;
+			animation: roll linear infinite 1.5s;
+		}
+		@keyframes roll {
+			0% {
+				transform: rotate(0);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}*/
+			
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="square"></div>
+	</div>
+	<div class="box">
+		<div class="rectangle"></div>
+	</div>
+	<div class="box">
+		<div class="circle"></div>
+	</div>
+	<div class="box">
+		<div class="oval"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-up"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-down"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-left"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-right"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-left-up"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-left-down"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-right-up"></div>
+	</div>
+	<div class="box">
+		<div class="triangle-right-down"></div>
+	</div>
+	<div class="box">
+		<div class="Parallelogram"></div>
+	</div>
+	<div class="box">
+		<div class="Trapezoid"></div>
+	</div>
+	<div class="box">
+		<div class="Hexagonal-star">
+			<div class="Hexagonal-star-one"></div>
+			<div class="Hexagonal-star-two"></div>
+			<div class="Hexagonal-star-three"></div>
+		</div>
+	</div>
+	<div class="box" style="transform:rotate(35deg)">
+		<div class="star5">
+			<div class="angle5"></div>
+			<div class="star5-one"></div>
+			<div class="star5-two"></div>
+			<div class="star5-three"></div>
+			<div class="star5-four"></div>
+			<div class="star5-five"></div>
+		</div>
+	</div>
+	<div class="box" style="margin-left: 40px">
+		<div class="angle5"></div>
+	</div>
+	<div class="box">
+		<div class="hexagon"></div>
+	</div>
+	<div class="box" style="position: relative">
+		<div class="Octagon"></div>
+		<div class="Octagon-upl"></div>
+		<div class="Octagon-upr"></div>
+		<div class="Octagon-downl"></div>
+		<div class="Octagon-downr"></div>
+	</div>
+	<div class="box">
+		<div class="love"></div>
+	</div>
+	<div class="box">
+		<div class="egg"></div>
+	</div>
+	<div class="box">
+		<div class="pac-man"></div>
+	</div>
+	<div class="box">
+		<div class="dialog"></div>
+	</div>
+	<div class="box">
+		<div class="star-12"></div>
+	</div>
+	<div class="box">
+		<div class="star-8"></div>
+	</div>
+	<div class="box">
+		<div class="diamond"></div>
+	</div>
+	<div class="box tj-box" style="position: relative">
+		<div class="tj"></div>
+		<div class="eye-w"></div>
+		<div class="eye-b"></div>
+		<div class="tj-circle1"></div>
+		<div class="tj-circle2"></div>
+	</div>
+</body>
+</html>
