@@ -7,6 +7,7 @@
 #### 用法
 *以radio为例*
 1.引入jquery,所有组件均用到jquery处理交互,本项目采用3.3.1版本的jquery(必须)
+
 2.引入css(必须)
 ```javascript
 <link rel="stylesheet" href="https://mikixing.github.io/ui/style/index.css" />
