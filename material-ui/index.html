@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="./css/selector.css">
 	</head>
 	<body>
-		<header>Text Field</header>
+		<h1>Text Field</h1>
 		<p class="description">TextField包装器组件是一个完整的表单控件，包括标签，输入和帮助文本。</p>
 		<div class="box">
 			<div class="jar">
@@ -102,7 +102,7 @@
 					</div>
 					<div class="wrap fl jar-wrap__usual">
 						<label for="select_man" class="active-select-man_default">select_man</label>
-						<div class="input-field jar-field__usual">
+						<div class="input-field jar-fieldx__usual" select-man>
 							<input autocomplete="off" id="select_man" type="text" value="1" usual>
 							<div class="triangle-down"></div>
 							<div class="miki-select">
@@ -120,63 +120,51 @@
 				</form>
 			</div>
 		</div>
-		<script src="./js/jquery.js"></script>
+		<h1>Snackbar</h1>
+		<p class="description">消息条(Snackbar)通过一条消息来提供有关应用进程的简短信息-通常在屏幕底部.</p>
+		<div class="outer">
+			<div class="snackbar">
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_left>top_left</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_center>top_center</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_right>top_right</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_left>bottom_left</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_center>bottom_center</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_right>bottom_right</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_success>custom_success</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_error>custom_error</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_warn>custom_warn</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_normal>custom_normal</button>
+				</div>
+				<!-- <div calss="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_more>custom_more</button>
+				</div> -->
+			</div>
+		</div>
+		<!-- <script src="./js/jquery.js"></script>
 		<script src="./js/selector.js"></script>
+		<script src="./js/snackbar.js"></script> -->
+		<script src="./index.bundle.js"></script>
 		<script>
-			$(document).on('focus', 'input[usual]', function () {
-				$(this).parent().parent().children('label').removeClass('blur-label').addClass('active-usual')
-				$(this).closest('.input-field').addClass('focus-field__usual')
-			})
-			$(document).on('blur', 'input[usual]', function () {
-				$(this).closest('.input-field').removeClass('focus-field__usual')
-				$(this).parent().parent().children('label').addClass('blur-label')
-				if (this.value) return
-				$(this).parent().parent().children('label').removeClass('active-usual')
-			})
-			$(document).on('focus', 'input[error]', function () {
-				$(this).parent().parent().children('label').addClass('active-error')
-			})
-			$(document).on('blur', 'input[error]', function () {
-				if (this.value) return
-				$(this).parent().parent().children('label').removeClass('active-error')
-			})
-			$(document).on('focus', 'textarea', function () {
-				$(this).parent().parent().children('label').addClass('active-usual')
-				$(this).closest('.input-field').addClass('focus-field__usual')
-			})
-			$(document).on('blur', 'textarea', function () {
-				$(this).closest('.input-field').removeClass('focus-field__usual')
-				if (this.value) return
-				$(this).parent().parent().children('label').removeClass('active-usual')
-			})
-			$(document).on('focus', 'input[withplaceholder]', function () {
-				$(this).parent().parent().children('label').removeClass('blur-label').addClass('active-usual')
-				$(this).closest('.input-field').addClass('focus-field__usual')
-				this.placeholder = 'placeholder'
-			})
-			$(document).on('blur', 'input[withplaceholder]', function () {
-				this.placeholder = ''
-				$(this).closest('.input-field').removeClass('focus-field__usual')
-				$(this).parent().parent().children('label').addClass('blur-label')
-				if (this.value) return
-				$(this).parent().parent().children('label').removeClass('active-usual')
-			})
-			$(document).on('focus', 'select', function () {
-				$(this).parent().parent().children('label').removeClass('blur-label').addClass('active-usual')
-				$(this).closest('.input-field').addClass('focus-field__usual')
-			})
-			$(document).on('blur', 'select', function () {
-				$(this).closest('.input-field').removeClass('focus-field__usual')
-				$(this).parent().parent().children('label').addClass('blur-label')
-				if (this.value) return
-				$(this).parent().children('label').removeClass('active-usual')
-			})
 
-			var select_man = document.getElementById('select_man') 
-			var s = new Selector()
-			select_man.onclick = function () {
-				s.init(select_man)
-			}
 		</script>
 	</body>
 </html>

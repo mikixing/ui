@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?c7caqg');
+  src:  url('fonts/icomoon.eot?c7caqg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?c7caqg') format('truetype'),
+    url('fonts/icomoon.woff?c7caqg') format('woff'),
+    url('fonts/icomoon.svg?c7caqg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-increase:before {
+  content: "\e902";
+}
+.icon-decrease:before {
+  content: "\e903";
+}
+.icon-document:before {
+  content: "\e005";
+}
+.icon-plus:before {
+  content: "\e145";
+}
+.icon-up:before {
+  content: "\e316";
+}
+.icon-clock:before {
+  content: "\e905";
+}
+.icon-down:before {
+  content: "\e904";
+}
+.icon-search:before {
+  content: "\e901";
+}
+.icon-calendar:before {
+  content: "\e900";
+}

@@ -1,0 +1,51 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  overflow-x: hidden; }
+
+h2, h4, h5 {
+  margin: 0;
+  padding: 0; }
+
+button {
+  outline: none; }
+
+.gap {
+  margin-top: 10px; }
+
+.gap-3times {
+  margin-top: 30px; }
+
+.gap-5times {
+  margin-top: 50px; }
+
+.box {
+  width: 500px;
+  margin: auto;
+  padding: 10px; }
+
+.out {
+  width: 600px;
+  margin: auto;
+  margin-top: 20px; }
+
+input::-webkit-input-placeholder {
+  color: #d1d1d1;
+  font-size: 14px; }
+
+input:-ms-input-placeholder {
+  color: #d1d1d1;
+  font-size: 14px; }
+
+input::-ms-input-placeholder {
+  color: #d1d1d1;
+  font-size: 14px; }
+
+input::placeholder {
+  color: #d1d1d1;
+  font-size: 14px; }

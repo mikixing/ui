@@ -12,25 +12,31 @@
 	background: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	padding: 10px 0;
-	display: none;
 	cursor: pointer;
 	color: rgba(0, 0, 0, 0.87);
+	transform: scale(0);
+	transition-duration: .2s;
+	transition-property: transform;
+}
+.miki-select__active {
+	transform: scale(1);
 }
 .miki-select__item {
 	width: 200px;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+	transition: background .2s;
 }
 .miki-select__item:last-child {
 	border: none;
 }
 .miki-select__item-active {
-	background: rgba(0, 0, 0, .23);
+	background: rgba(0, 0, 0, .16);
 }
 .miki-select__item:not(.miki-select__item-active):hover {
-	background: rgba(0, 0, 0, .14);
+	background: rgba(0, 0, 0, .08);
 }

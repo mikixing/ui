@@ -2,563 +2,503 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>css27种图形</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>mk-ui</title>
+	<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" href="asset/style.css">
 	<style>
-		.box {
-			padding: 20px;
-			width: 100px;
-			height: 100px;
-			float: left;
+		.contents {
+			position: fixed;
+			top: 50px;
+			left: 50px;
+			box-shadow: 1px 2px 15px 0px #cac4c4;
+			padding-right: 20px;
+			padding-bottom: 10px;
 		}
-		.square {
-			width: 100px;
-			height: 100px;
-			background: #00ffb9;
+		.contents-item {
+			margin: 5px;
 		}
-		.rectangle {
-			width: 100px;
-			height: 50px;
-			background: red;
+		.miki-dp {
+		    font-size: 14px;
+		    color: #666;
 		}
-		.circle {
-			width: 100px;
-			height: 100px;
-			background: red;
-			border-radius: 100%;
+		.miki-dp-child {
+		    padding-left: 20px;
+		    padding-top: 5px;
+		    cursor: pointer;
+		    display: none;
+			font-size: 16px;
 		}
-		.oval {
-			width: 100px;
-			height: 50px;
-			background: #eae0e0;
-			border-radius: 50%;
+		.miki-dp-child > a {
+			text-decoration: none;
 		}
-		.triangle-up {
-			width: 0;
-			height: 0;
-			border-bottom: 50px solid red;
-			border-left: 50px solid transparent;
-			border-right: 50px solid transparent;
-		}
-		.triangle-down {
-			width: 0;
-			height: 0;
-			border-top: 50px solid red;
-			border-left: 50px solid transparent;
-			border-right: 50px solid transparent;
-		}
-		.triangle-left {
-			width: 0;
-			height: 0;
-			border-top: 50px solid transparent;
-			border-bottom: 50px solid transparent;
-			border-left: 50px solid red;
-		}
-		.triangle-right {
-			width: 0;
-			height: 0;
-			border-top: 50px solid transparent;
-			border-bottom: 50px solid transparent;
-			border-right: 50px solid red;
-		}
-		.triangle-left-up {
-			width: 0;
-			height: 0;
-			border-top: 50px solid #00ff14;
-			border-right: 50px solid transparent;
-		}
-		.triangle-left-down {
-			width: 0;
-			height: 0;
-			border-bottom: 50px solid #0089ff;
-			border-right: 50px solid transparent;
-		}
-		.triangle-right-up {
-			width: 0;
-			height: 0;
-			border-top: 50px solid #ff00f7;
-			border-left: 50px solid transparent;
-		}
-		.triangle-right-down {
-			width: 0;
-			height: 0;
-			border-bottom: 50px solid #00ff14;
-			border-left: 50px solid transparent;
-		}
-		.Parallelogram {
-			width: 100px;
-			height: 100px;
-			background: #ff4700;
-			transform: skew(15deg);
-		}
-		.Trapezoid {
-			width: 50px;
-			border-bottom: 50px solid #5fd6db;
-			border-left: 50px solid transparent;
-			border-right: 50px solid transparent;
-		}
-		.Hexagonal-star {
-			position: relative;
-			margin-left: 50px;
-		}
-		.Hexagonal-star>div {
-			background: #ffbd00;
-		}
-		.Hexagonal-star-one {
-			position: absolute;
-		    width: 20px;
-		    height: 20px;
-		    transform: rotate(-15deg) skew(60deg, 60deg);
-		}
-		.Hexagonal-star-two {
-			position: absolute;
-			width: 20px;
-		    height: 20px;
-		   	transform: rotate(45deg) skew(60deg, 60deg);
-		}
-		.Hexagonal-star-three {
-			position: absolute;
-		    width: 20px;
-		    height: 20px;
-			transform: rotate(105deg) skew(60deg, 60deg);
-		}
-		.star5 {
-			top: 10px;
-			position: relative;
-		}
-		.star5 .angle5 {
-			position: relative;
-			width: 50px;
-		    height: 0;
-		    border-top: 46.5px solid red;
-		    border-left: 15px solid transparent;
-    		border-right: 15px solid transparent;
-		}
-		.star5-one {
-			width: 0;
-		    height: 0;
-		    border-bottom: 50px solid red;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    position: absolute;
-		    top: 46px;
-		    left: 15px;
-		    transform: rotate(180deg);
-		}
-		.star5-two {
-			width: 0;
-		    height: 0;
-		    border-bottom: 50px solid red;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    transform: rotate(253deg);
-		    position: absolute;
-		    left: -41px;
-		    top: 6px;
-		}
-		.star5-three {
-			width: 0;
-		    height: 0;
-		    border-bottom: 50px solid red;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    transform: rotate(108deg);
-		    position: absolute;
-		    left: 71px;
-		    top: 6px;
-		}
-		.star5-four {
-			width: 0;
-		    height: 0;
-		    border-bottom: 50px solid red;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    transform: rotate(-36deg);
-		    position: absolute;
-		    left: -18px;
-		    top: -58px;
-		}
-		.star5-five {
-			width: 0;
-		    height: 0;
-		    border-bottom: 50px solid red;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    transform: rotate(397deg);
-		    position: absolute;
-		    left: 49px;
-		    top: -59px;
-		}
-		.angle5 {
-			position: relative;
-			width: 50px;
-		    height: 0;
-		    border-top: 46.5px solid red;
-		    border-left: 15px solid transparent;
-    		border-right: 15px solid transparent;
-		}
-		.angle5:before {
-			left: -15px;
-		    top: -76px;
-		    position: absolute;
-		    content: '';
-		    display: block;
-		    border-bottom: 30px solid red;
-		    border-left: 40px solid transparent;
-		    border-right: 40px solid transparent;
-		}
-		.hexagon {
-			width: 50px;
-			height: 86px;
-			background: red;
-			position: absolute;
-		}
-		.hexagon:before {
-			content: '';
-			width: 50px;
-			height: 86px;
-			background: red;
-			position: absolute;
-			transform: rotate(60deg);
-		}
-		.hexagon:after {
-			content: '';
-			width: 50px;
-			height: 86px;
-			background: red;
-			transform: rotate(-60deg);
-			position: absolute;
-		}
-		.Octagon {
-			width: 100px;
-			height: 100px;
-			background: red;
-		}
-		.Octagon-upl {
-			width: 0;
-			height: 0;
-			border-left: 25px solid #fff;
-			border-bottom: 25px solid transparent;
-			position: absolute;
-			top: 20px;
-		}
-		.Octagon-upr {
-			width: 0;
-			height: 0;
-			border-right: 25px solid #fff;
-			border-bottom: 25px solid transparent;
-			position: absolute;
-			top: 20px;
-    		right: 20px;
-		}
-		.Octagon-downl {
-			width: 0;
-			height: 0;
-			border-top: 25px solid transparent;
-			border-left: 25px solid #fff;
-			position: absolute;
-			top: 95px;
-		}
-		.Octagon-downr {
-			width: 0;
-			height: 0;
-			border-top: 25px solid transparent;
-			border-right: 25px solid #fff;
-			position: absolute;
-			top: 95px;
-			right: 20px;
-		}
-		.love {
-			position: relative;
-			width: 50px;
-			height: 50px;
-			background: red;
-			transform: rotate(45deg);		}
-		.love:before {
-			content: '';
-		    position: absolute;
-		    width: 50px;
-		    height: 50px;
-		    border-radius: 100%;
-		    background: red;
-		    top: 0px;
-		    left: -25px;
-		}
-		.love:after {
-			content: '';
-		    position: absolute;
-		    width: 50px;
-		    height: 50px;
-		    border-radius: 100%;
-		    background: red;
-		    top: -25px;
-		}
-		.egg {
-			width: 50px;
-			height: 100px;
-			background: red;
-			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-		}
-		.pac-man {
-			width: 0;
-			height: 0;
-			border-top: 50px solid yellow;
-			border-left: 50px solid red;
-			border-bottom: 50px solid green;
-			border-right: 50px solid transparent;
-			border-radius: 100%;
-		}
-		.dialog {
-			width: 100px;
-			height: 60px;
-			background: #ece3e3;
-			border-radius: 10px;
-			position: relative;
-		}
-		.dialog:before {
-			content: '';
-			width: 0;
-			height: 0;
-			border-right: 23px solid #ece3e3;
-			border-top: 10px solid transparent;
-			border-bottom: 10px solid transparent;
-			position: absolute;
-			left: -23px;
-    		top: 20px;
-		}
-		.star-12 {
-			width: 50px;
-			height: 50px;
-			background: #ffb10082;
-			position: relative;
-		}
-		.star-12:before {
-			content: '';
-			width: 50px;
-			height: 50px;
-			background: #ffb10082;
-			position: absolute;
-			transform: rotate(30deg);
-		}
-		.star-12:after {
-			content: '';
-			width: 50px;
-			height: 50px;
-			background: #ffb10082;
-			position: absolute;
-			transform: rotate(-30deg);
-		}
-		.star-8 {
-			width: 50px;
-			height: 50px;
-			background: #ffb10082;
-			position: relative;
-		}
-		.star-8:before {
-			content: '';
-			width: 50px;
-			height: 50px;
-			background: #ffb10082;
-			position: absolute;
-			transform: rotate(45deg);
-		}
-		.diamond {
-			width: 0;
-		    height: 0;
-		    border-top: 70px solid #ffb10082;
-		    border-left: 45px solid transparent;
-		    border-right: 45px solid transparent;
-		    position: relative;
-		}
-		.diamond:before {
-			content: '';
-		    width: 40px;
-		    height: 0;
-		    position: absolute;
-		    border-left: 25px solid transparent;
-		    border-right: 25px solid transparent;
-		    border-bottom: 30px solid #ffb10082;
-		    top: -100px;
-		    left: -45px;
-		}
-		.tj {
-			width: 100px;
-			height: 100px;
-			border-radius: 100%;
-			background: black;
-			position: relative;
-		}
-		.tj:before {
-			content: '';
-			border-bottom: 48px solid #EEEEEE;
-			border-right: 48px solid #EEEEEE;
-			border-left: 48px solid transparent;
-			border-top: 48px solid transparent;
-			position: absolute;
-			border-radius: 100%;
-			top: 2px;
-    		left: 2px;
-		}
-		.eye-w {
-			width: 10px;
-			height: 10px;
-			border-radius: 100%;
-			background: #fff;
-			position: absolute;
-			z-index: 10;
-			left: 89px;
-    		top: 54px;
-		}
-		.eye-b {
-			width: 10px;
-			height: 10px;
-			border-radius: 100%;
-			background: black;
-			position: absolute;
-			z-index: 10;
-			top: 77px;
-    		left: 42px;
-		}
-		.tj-circle1 {
-			width: 0;
-		    height: 0;
-		    border-top: 24px solid black;
-		    border-left: 24px solid black;
-		    border-bottom: 24px solid transparent;
-		    border-right: 24px solid transparent;
-		    border-radius: 100%;
-		    position: absolute;
-		    left: 62px;
-		    top: 28px;
-		    transform: rotate(180deg);
-		}
-		.tj-circle2 {
-			content: '';
-		    width: 0;
-		    height: 0;
-		    border-top: 24px solid #EEEEEE;
-		    border-left: 24px solid #EEEEEE;
-		    border-bottom: 24px solid transparent;
-		    border-right: 24px solid transparent;
-		    border-radius: 100%;
-		    position: absolute;
-		    top: 65px;
-		    left: 31px;
-		}
-		/*.tj-box {
-			transform-origin: 70px 70px;
-			animation: roll linear infinite 1.5s;
-		}
-		@keyframes roll {
-			0% {
-				transform: rotate(0);
-			}
-			100% {
-				transform: rotate(360deg);
-			}
-		}*/
-			
 	</style>
 </head>
 <body>
-	<div class="box">
-		<div class="square"></div>
+	<div class="contents">
+		<div class="miki-dp">
+            <div class="miki-dp-child miki-dp-more">
+                <div style="font-size: 18px;">element-ui</div>
+                <div class="miki-dp-child miki-dp-more">
+                    <a href="#radio">radio</a>
+                </div>
+            </div>
+            <div class="miki-dp-child miki-dp-more">
+                <div style="font-size: 18px;">material-ui</div>
+            </div>
+        </div>
 	</div>
-	<div class="box">
-		<div class="rectangle"></div>
-	</div>
-	<div class="box">
-		<div class="circle"></div>
-	</div>
-	<div class="box">
-		<div class="oval"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-up"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-down"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-left"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-right"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-left-up"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-left-down"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-right-up"></div>
-	</div>
-	<div class="box">
-		<div class="triangle-right-down"></div>
-	</div>
-	<div class="box">
-		<div class="Parallelogram"></div>
-	</div>
-	<div class="box">
-		<div class="Trapezoid"></div>
-	</div>
-	<div class="box">
-		<div class="Hexagonal-star">
-			<div class="Hexagonal-star-one"></div>
-			<div class="Hexagonal-star-two"></div>
-			<div class="Hexagonal-star-three"></div>
+	<div class="mk-ui-container">
+		<div class="out">
+			<h2 id="radio">radio</h2>
+			<div class="box">
+				<h4>基础用法</h4>
+				<div class="type-normal gap">
+					<label class="mk-radio">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" name="normal" value=1>
+						</span><span class="mk-radio__label">aaa</span>
+					</label>
+					<label class="mk-radio">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" name="normal" value=2>
+						</span><span class="mk-radio__label">bbb</span>
+					</label>
+					<label class="mk-radio">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" name="normal" value=3>
+						</span><span class="mk-radio__label">ccc</span>
+					</label>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>禁用状态</h4>
+				<div class="type-disabled gap" style="margin-top: 20px;">
+					<label class="mk-radio is-disabled">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" disabled="disabled" type="radio" name="diasble">
+						</span><span class="mk-radio__label">禁用</span>
+					</label>
+					<label class="mk-radio is-disabled is-checked">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" disabled="disabled" type="radio" name="diasble">
+						</span><span class="mk-radio__label">禁用并选中</span>
+					</label>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>按钮样式</h4>
+				<div class="type-button gap">
+					<div class="mk-radio-btn-group">
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">上海</span>
+						</label>
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">北京</span>
+						</label>
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">深圳</span>
+						</label>
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">广州</span>
+						</label>
+					</div>
+				</div>
+				<div class="type-button gap">
+					<div class="mk-radio-btn-group">
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">海口</span>
+						</label>
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">文昌</span>
+						</label>
+						<label class="mk-radio-btn is-disabled">
+							<input class="mk-radio-btn__input" type="radio">
+							<span class="mk-radio-btn__label">琼海</span>
+						</label>
+						<label class="mk-radio-btn">
+							<input class="mk-radio-btn__input" type="radio" value="11">
+							<span class="mk-radio-btn__label">三亚</span>
+						</label>
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>带有边框</h4>
+				<div class="type-border gap" style="margin-top: 20px;">
+					<label class="mk-radio is-bordered">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" name="border">
+						</span>
+						<span class="mk-radio__label">有边框1</span>
+					</label>
+					<label class="mk-radio is-bordered">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" name="border">
+						</span>
+						<span class="mk-radio__label">有边框2</span>
+					</label>
+				</div>
+				<div class="type-border gap" style="margin-top: 20px;">
+					<label class="mk-radio is-bordered is-disabled">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" disabled="disabled" name="border">
+						</span>
+						<span class="mk-radio__label">不可用</span>
+					</label>
+					<label class="mk-radio is-bordered is-disabled is-checked">
+						<span class="mk-radio__input">
+							<span class="mk-radio__inner"></span>
+							<input class="mk-radio__original" type="radio" disabled="disabled" name="border">
+						</span>
+						<span class="mk-radio__label">不可用选中</span>
+					</label>
+				</div>
+			</div>
 		</div>
-	</div>
-	<div class="box" style="transform:rotate(35deg)">
-		<div class="star5">
-			<div class="angle5"></div>
-			<div class="star5-one"></div>
-			<div class="star5-two"></div>
-			<div class="star5-three"></div>
-			<div class="star5-four"></div>
-			<div class="star5-five"></div>
+
+		<div class="out">
+			<h2>checkbox</h2>
+			<div class="box">
+				<h4>基础用法</h4>
+				<div class="mk-wrap type-normal gap">
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=1>
+						</span><span class="mk-checkbox__label">aaa</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=2>
+						</span><span class="mk-checkbox__label">bbb</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=3>
+						</span><span class="mk-checkbox__label">ccc</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=4>
+						</span><span class="mk-checkbox__label">ddd</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=5>
+						</span><span class="mk-checkbox__label">eee</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=6>
+						</span><span class="mk-checkbox__label">fff</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=7>
+						</span><span class="mk-checkbox__label">ggg</span>
+					</label>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>禁用状态</h4>
+				<div class="mk-wrap type-disabled gap">
+					<label class="mk-checkbox is-disabled">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=8>
+						</span><span class="mk-checkbox__label">hhh</span>
+					</label>
+					<label class="mk-checkbox is-disabled is-checked">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=9>
+						</span><span class="mk-checkbox__label">iii</span>
+					</label>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>多选框组</h4>
+				<div class="gap"></div>
+				<div class="mk-checkbox-group">
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=10>
+						</span><span class="mk-checkbox__label">北京</span>
+					</label>
+					<label class="mk-checkbox">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=11>
+						</span><span class="mk-checkbox__label">上海</span>
+					</label>
+					<label class="mk-checkbox is-disabled">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=12>
+						</span><span class="mk-checkbox__label">广州</span>
+					</label>
+					<label class="mk-checkbox is-disabled is-checked">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=13>
+						</span><span class="mk-checkbox__label">深圳</span>
+					</label>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>indeterminate 状态</h4>
+				<div class="mk-wrap type-group gap">
+					<label class="mk-checkbox" data-indeterminate="city">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="normal" value=14>
+						</span><span class="mk-checkbox__label">全选</span>
+					</label>
+					<div class="gap"></div>
+					<div class="mk-checkbox-group" id="city">
+						<label class="mk-checkbox">
+							<span class="mk-checkbox__input">
+								<span class="mk-checkbox__inner"></span>
+								<input class="mk-checkbox__original" type="checkbox" name="normal" value=15>
+							</span><span class="mk-checkbox__label">北京</span>
+						</label>
+						<label class="mk-checkbox">
+							<span class="mk-checkbox__input">
+								<span class="mk-checkbox__inner"></span>
+								<input class="mk-checkbox__original" type="checkbox" name="normal" value=16>
+							</span><span class="mk-checkbox__label">上海</span>
+						</label>
+						<label class="mk-checkbox">
+							<span class="mk-checkbox__input">
+								<span class="mk-checkbox__inner"></span>
+								<input class="mk-checkbox__original" type="checkbox" name="normal" value=17>
+							</span><span class="mk-checkbox__label">广州</span>
+						</label>
+						<label class="mk-checkbox">
+							<span class="mk-checkbox__input">
+								<span class="mk-checkbox__inner"></span>
+								<input class="mk-checkbox__original" type="checkbox" name="normal" value=18>
+							</span><span class="mk-checkbox__label">深圳</span>
+						</label>
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>按钮样式</h4>
+				<div class="type-button gap">
+					<div class="mk-checkbox-btn-group">
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22>
+							<span class="mk-checkbox-btn__label">上海</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=222>
+							<span class="mk-checkbox-btn__label">北京</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=2222>
+							<span class="mk-checkbox-btn__label">深圳</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22222>
+							<span class="mk-checkbox-btn__label">广州</span>
+						</label>
+					</div>
+					<div class="gap"></div>
+					<div class="mk-checkbox-btn-group" small>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22>
+							<span class="mk-checkbox-btn__label">上海</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=222>
+							<span class="mk-checkbox-btn__label">北京</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=2222>
+							<span class="mk-checkbox-btn__label">深圳</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22222>
+							<span class="mk-checkbox-btn__label">广州</span>
+						</label>
+					</div>
+					<div class="gap"></div>
+					<div class="mk-checkbox-btn-group" mini>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22>
+							<span class="mk-checkbox-btn__label">上海</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=222>
+							<span class="mk-checkbox-btn__label">北京</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=2222>
+							<span class="mk-checkbox-btn__label">深圳</span>
+						</label>
+						<label class="mk-checkbox-btn">
+							<input class="mk-checkbox-btn__input" type="checkbox" value=22222>
+							<span class="mk-checkbox-btn__label">广州</span>
+						</label>
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>带有边框</h4>
+				<div class="type-border gap" style="margin-top: 20px;">
+					<label class="mk-checkbox is-bordered">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="border" value="a">
+						</span>
+						<span class="mk-checkbox__label">有边框1</span>
+					</label>
+					<label class="mk-checkbox is-bordered">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" name="border" value="b">
+						</span>
+						<span class="mk-checkbox__label">有边框2</span>
+					</label>
+				</div>
+				<div class="type-border gap" style="margin-top: 20px;">
+					<label class="mk-checkbox is-bordered is-disabled">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" disabled="disabled" name="border" value="c">
+						</span>
+						<span class="mk-checkbox__label">不可用</span>
+					</label>
+					<label class="mk-checkbox is-bordered is-disabled is-checked">
+						<span class="mk-checkbox__input">
+							<span class="mk-checkbox__inner"></span>
+							<input class="mk-checkbox__original" type="checkbox" disabled="disabled" name="border" value="d">
+						</span>
+						<span class="mk-checkbox__label">不可用选中</span>
+					</label>
+				</div>
+			</div>
 		</div>
+
+		<div class="out">
+			<h2>input</h2>
+			<div class="box">
+				<h4>基础用法</h4>
+				<div class="mk-wrap type-normal gap">
+					<div class="mk-input">
+						<input class="mk-input__inner">
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>禁用状态</h4>
+				<div class="mk-wrap type-normal gap">
+					<div class="mk-input is-disabled">
+						<input class="mk-input__inner" disabled="disabled">
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>可清空</h4>
+				<div class="mk-wrap type-normal gap">
+					<div class="mk-input mk-input--suffix">
+						<input class="mk-input__inner">
+						<span class="mk-input__suffix">
+							<span class="mk-input__suffix-clear"></span>
+						</span>
+					</div>
+				</div>
+				<div class="gap-3times"></div>
+				<h4>带icon的输入框</h4>
+				<div class="mk-wrap type-normal gap">
+					<div class="mk-input mk-input--suffix">
+						<input class="mk-input__inner" placeholder="请选择日期">
+						<span class="mk-input__suffix">
+							<span class="mk-input__suffix-inner">
+								<i class="icon-calendar" style="color:#d1d1d1"></i>
+							</span>
+						</span>
+					</div>
+					<div class="gap"></div>
+					<div class="mk-input mk-input--prefix">
+						<input class="mk-input__inner" placeholder="请输入内容">
+						<span class="mk-input__prefix">
+							<span class="mk-input__prefix-inner">
+								<i class="icon-search" style="color:#d1d1d1;font-size:14px;"></i>
+							</span>
+						</span>
+					</div>
+					<div class="gap-3times"></div>
+					<h4>文本域</h4>
+					<div class="gap"></div>
+					<div class="mk-textarea">
+						<textarea autocomplete="off" rows="4" cols="50" placeholder="请输入内容" style="min-height: 33px;"></textarea>
+					</div>
+					<div class="gap-3times"></div>
+					<h4>自适应高度的文本域</h4>
+					<div class="gap"></div>
+					<div class="mk-textarea">
+						<textarea id="auto_textarea" autocomplete="off" rows="4" cols="40" placeholder="请输入内容"></textarea>
+					</div>
+					<div class="gap"></div>
+					<h5>div模仿textarea自适应文本域</h5>
+					<div class="gap"></div>
+					<div class="mk-textarea">
+						<div class="mk-textarea__fake" contenteditable></div>
+					</div>
+					<div class="gap-3times"></div>
+					<h4>复合型输入框</h4>
+					<div class="gap"></div>
+					<div class="mk-input mk-input-group mk-input-group--prepend">
+						<div class="mk-input-group__prepend">
+							http://
+						</div><input class="mk-input__inner" placeholder="请输入内容">
+					</div>
+					<div class="gap"></div>
+					<div class="mk-input mk-input-group mk-input-group--append">
+						<input class="mk-input__inner" placeholder="请输入内容"><div class="mk-input-group__append">
+							.com
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="js_input-number"></div>
+		<div id="js_select"></div>
+		<div id="js_switch"></div>
+		<div id="js_slider"></div>
+		<div id="js_tp"></div>
+		<div id="js_upload"></div>
+		<div id="js_cp"></div>
+		<div id="js_pagination"></div>
+		<div class="" style="width: 200px;height: 300px;margin-top:50px;">
+
+		</div>
+
+		<div id="js_dp"></div>
+		<iframe id="metarial-ui" src="./material-ui/index.html" width="100%" height="600px" border=0></iframe>
 	</div>
-	<div class="box" style="margin-left: 40px">
-		<div class="angle5"></div>
-	</div>
-	<div class="box">
-		<div class="hexagon"></div>
-	</div>
-	<div class="box" style="position: relative">
-		<div class="Octagon"></div>
-		<div class="Octagon-upl"></div>
-		<div class="Octagon-upr"></div>
-		<div class="Octagon-downl"></div>
-		<div class="Octagon-downr"></div>
-	</div>
-	<div class="box">
-		<div class="love"></div>
-	</div>
-	<div class="box">
-		<div class="egg"></div>
-	</div>
-	<div class="box">
-		<div class="pac-man"></div>
-	</div>
-	<div class="box">
-		<div class="dialog"></div>
-	</div>
-	<div class="box">
-		<div class="star-12"></div>
-	</div>
-	<div class="box">
-		<div class="star-8"></div>
-	</div>
-	<div class="box">
-		<div class="diamond"></div>
-	</div>
-	<div class="box tj-box" style="position: relative">
-		<div class="tj"></div>
-		<div class="eye-w"></div>
-		<div class="eye-b"></div>
-		<div class="tj-circle1"></div>
-		<div class="tj-circle2"></div>
-	</div>
+	<script src="./util/index.js"></script>
+	<script src="index.js"></script>
+	<script type="text/javascript">
+		$('.contents').mikiDp()
+	</script>
 </body>
 </html>

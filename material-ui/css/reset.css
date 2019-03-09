@@ -7,7 +7,7 @@ ul, li {
 	margin: 0;
 	list-style: none;
 }
-input, textarea {
+input, textarea, button {
 	padding: 0;
 	border: 0;
 	outline: none
