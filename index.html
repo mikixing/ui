@@ -18,6 +18,14 @@
 			padding-right: 20px;
 			padding-bottom: 10px;
 		}
+		.title-item {
+			padding: 5px;
+		}
+		.title-item>a {
+			text-decoration: none;
+			color: #666;
+			font-size: 16px;
+		}
 		.contents-item {
 			margin: 5px;
 		}
@@ -41,13 +49,24 @@
 	<div class="contents">
 		<div class="miki-dp">
             <div class="miki-dp-child miki-dp-more">
-                <div style="font-size: 18px;">element-ui</div>
+                <div style="font-size: 18px;font-weight: bold;">element-ui</div>
                 <div class="miki-dp-child miki-dp-more">
-                    <a href="#radio">radio</a>
+					<div class="title-item"><a href="#radio">radio</a></div>
+					<div class="title-item"><a href="#check_box">checkBox</a></div>
+					<div class="title-item"><a href="#input">input</a></div>
+					<div class="title-item"><a href="#js_input-number">inputNumber</a></div>
+					<div class="title-item"><a href="#js_select">select</a></div>
+					<div class="title-item"><a href="#js_switch">switch</a></div>
+					<div class="title-item"><a href="#js_slider">slider</a></div>
+					<div class="title-item"><a href="#js_tp">timePicker</a></div>
+					<div class="title-item"><a href="#js_upload">upload</a></div>
+					<div class="title-item"><a href="#js_cp">colorPicker</a></div>
+					<div class="title-item"><a href="#js_pagination">pagination</a></div>
+					<div class="title-item"><a href="#js_dp">dropdown</a></div>
                 </div>
             </div>
             <div class="miki-dp-child miki-dp-more">
-                <div style="font-size: 18px;">material-ui</div>
+                <div style="font-size: 18px;font-weight: bold;">material-ui</div>
             </div>
         </div>
 	</div>
@@ -172,7 +191,7 @@
 		</div>
 
 		<div class="out">
-			<h2>checkbox</h2>
+			<h2 id="check_box">checkbox</h2>
 			<div class="box">
 				<h4>基础用法</h4>
 				<div class="mk-wrap type-normal gap">
@@ -399,7 +418,7 @@
 		</div>
 
 		<div class="out">
-			<h2>input</h2>
+			<h2 id="input">input</h2>
 			<div class="box">
 				<h4>基础用法</h4>
 				<div class="mk-wrap type-normal gap">
