@@ -12,9 +12,9 @@
 2.引入css(必须)
 ```javascript
 <link rel="stylesheet" href="https://mikixing.github.io/ui/style/index.css" />
-````
+​````
 3.本项目提供index.html页面出现的字体图标,如果需要用到,请引入
-```javascript
+​```javascript
 <link rel="stylesheet" href="https://mikixing.github.io/ui/asset/style.css">
 ```
 4.引入js(必须)
