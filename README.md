@@ -24,23 +24,23 @@
 html
 ```javascript
 <div class="type-normal">
-			<label class="mk-radio">
-				<span class="mk-radio__input">
-					<span class="mk-radio__inner"></span>
-					<input class="mk-radio__original" type="radio" name="normal" value=1>
-				</span><span class="mk-radio__label">aaa</span>
-			</label>
-			<label class="mk-radio">
-				<span class="mk-radio__input">
-					<span class="mk-radio__inner"></span>
-					<input class="mk-radio__original" type="radio" name="normal" value=2>
-				</span><span class="mk-radio__label">bbb</span>
-			</label>
-			<label class="mk-radio">
-				<span class="mk-radio__input">
-					<span class="mk-radio__inner"></span>
-					<input class="mk-radio__original" type="radio" name="normal" value=3>
-				</span><span class="mk-radio__label">ccc</span>
-			</label>
+	<label class="mk-radio">
+		<span class="mk-radio__input">
+			<span class="mk-radio__inner"></span>
+			<input class="mk-radio__original" type="radio" name="normal" value=1>
+		</span><span class="mk-radio__label">aaa</span>
+	</label>
+	<label class="mk-radio">
+		<span class="mk-radio__input">
+			<span class="mk-radio__inner"></span>
+			<input class="mk-radio__original" type="radio" name="normal" value=2>
+		</span><span class="mk-radio__label">bbb</span>
+	</label>
+	<label class="mk-radio">
+		<span class="mk-radio__input">
+			<span class="mk-radio__inner"></span>
+			<input class="mk-radio__original" type="radio" name="normal" value=3>
+		</span><span class="mk-radio__label">ccc</span>
+	</label>
 </div>
 ```
