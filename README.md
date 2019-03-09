@@ -23,7 +23,7 @@
 ```
 5.写法
 *注意*:某个radio被选中以后,会触发一个`show.mk.radio.btn`事件,如果注册这个事件,就能拿到单选框的value值(前提是给每个radio设置value)
-html
+
 ```javascript
 <div class="type-normal">
 	<label class="mk-radio">
