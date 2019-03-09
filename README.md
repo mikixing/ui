@@ -4,3 +4,9 @@
 #### 主要内容
 * 模仿element-ui写了20个组件,包括单选框,多选框,输入框,上传,分页器等等
 * 模仿material-ui写了两大类组件,Text Field以及Snackbar.
+#### 用法
+*以radio为例*
+1.引入jquery,所有组件均用到jquery处理交互
+```javascript
+
+```
