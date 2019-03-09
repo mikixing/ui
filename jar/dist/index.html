@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Text Field</title>
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/style.css">
+		<link rel="stylesheet" href="./css/selector.css">
+	</head>
+	<body>
+		<h1>Text Field</h1>
+		<p class="description">TextField包装器组件是一个完整的表单控件，包括标签，输入和帮助文本。</p>
+		<div class="box">
+			<div class="jar">
+				<form class="fit">
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >usual</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >Uncontrolled</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >Require*</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__error">
+						<label for="error" class="jar-label__error">error</label>
+						<div class="input-field">
+							<input autocomplete="off" id="error" type="text" value="" error>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__disable">
+						<label for="disabled" class="jar-label__disabled active-disabled">disabled</label>
+						<div class="input-field">
+							<input autocomplete="off" id="disabled" type="text" value="123" disabled>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="password">password</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="password" type="password" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="read" class="active-read">read</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="read" type="text" value="read only" usual readOnly>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual jar-wrap__multiline">
+						<label for="multiline" >multiline</label>
+						<div class="input-field jar-field__usual jar-field__multiline">
+							<textarea name="" id="multiline" rows="5" cols="5" aria-invalid="false"></textarea>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual jar-wrap__placeholder">
+						<label for="withplaceholder" class="">with placeholder</label>
+						<div class="input-field jar-field__usual jar-field__placeholder">
+							<input autocomplete="off" id="withplaceholder" type="text" value="" withplaceholder usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="number" >number</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="number" type="number" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="search" >search</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="search" type="search" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<!-- <label for="bare" >bare</label> -->
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="bare" type="text" value="bare" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="select" class="jar-label__select">select</label>
+						<div class="input-field jar-field__usual jar-field__select">
+							<!-- <input autocomplete="off" id="select" type="text" value="" usual> -->
+							<select name="" id="">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+							<div class="triangle-down"></div>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="select_man" class="active-select-man_default">select_man</label>
+						<div class="input-field jar-fieldx__usual" select-man>
+							<input autocomplete="off" id="select_man" type="text" value="1" usual>
+							<div class="triangle-down"></div>
+							<div class="miki-select">
+								<div class="miki-select__item miki-select__item-active">1</div>
+								<div class="miki-select__item">2</div>
+								<div class="miki-select__item">3</div>
+								<div class="miki-select__item">4</div>
+								<!-- <div class="miki-select__item">5</div>
+								<div class="miki-select__item">6</div>
+								<div class="miki-select__item">7</div>
+								<div class="miki-select__item">8</div> -->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>		
+		</div>
+		<h1>Snackbar</h1>
+		<p class="description">消息条(Snackbar)通过一条消息来提供有关应用进程的简短信息-通常在屏幕底部.</p>
+		<div class="outer">
+			<div class="snackbar">
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_left>top_left</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_center>top_center</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_top_right>top_right</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_left>bottom_left</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_center>bottom_center</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_bottom_right>bottom_right</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_success>custom_success</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_error>custom_error</button>
+				</div>	
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_warn>custom_warn</button>
+				</div>
+				<div class="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_normal>custom_normal</button>
+				</div>
+				<!-- <div calss="snackbar-item-box">
+					<button class="snackbar-item" snackbar_custom_more>custom_more</button>		
+				</div> -->
+			</div>
+		</div>
+		<!-- <script src="./js/jquery.js"></script>
+		<script src="./js/selector.js"></script>
+		<script src="./js/snackbar.js"></script> -->
+		<script src="./index.bundle.js"></script>
+		<script>
+			
+		</script>
+	</body>
+</html>
