@@ -45,8 +45,4 @@
 		</span><span class="mk-radio__label">ccc</span>
 	</label>
 </div>
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> d0b7a5e5bb04af07e9382a0d04747292f7af0563
