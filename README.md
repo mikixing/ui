@@ -6,9 +6,11 @@
 
 #### 主要内容
 
-* 模仿element-ui写了20个组件,包括单选框,多选框,输入框,上传,分页器等等
+* 模仿element-ui写了单选框,多选框,输入框,上传,分页器等等
 
-* 模仿material-ui写了两大类组件,Text Field以及Snackbar.
+* 模仿atom写了fileTree
+
+* 模仿material-uiText Field以及Snackbar.
 
 #### 用法
 
