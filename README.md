@@ -38,43 +38,40 @@
 
 *注意*:某个radio被选中以后,会触发一个`show.mk.radio.btn`事件,如果注册这个事件,就能拿到单选框的value值(前提是给每个radio设置value)
 
-\```html
+```html
+<label class="mk-radio">
 
-<div class="type-normal">
+    <span class="mk-radio__input">
 
-  <label class="mk-radio">
+      <span class="mk-radio__inner"></span>
 
-​    <span class="mk-radio__input">
+      <input class="mk-radio__original" type="radio" name="normal" value=1>
 
-​      <span class="mk-radio__inner"></span>
-
-​      <input class="mk-radio__original" type="radio" name="normal" value=1>
-
-​      </span><span class="mk-radio__label">aaa</span>
+      </span>aaa
 
   </label>
 
   <label class="mk-radio">
 
-​    <span class="mk-radio__input">
+    <span class="mk-radio__input">
 
-​      <span class="mk-radio__inner"></span>
+      <span class="mk-radio__inner"></span>
 
-​      <input class="mk-radio__original" type="radio" name="normal" value=2>
+      <input class="mk-radio__original" type="radio" name="normal" value=2>
 
-​     </span><span class="mk-radio__label">bbb</span>
+     </span>bbb
 
   </label>
 
   <label class="mk-radio">
 
-​    <span class="mk-radio__input">
+    <span class="mk-radio__input">
 
-​      <span class="mk-radio__inner"></span>
+      <span class="mk-radio__inner"></span>
 
-​      <input class="mk-radio__original" type="radio" name="normal" value=3>
+      <input class="mk-radio__original" type="radio" name="normal" value=3>
 
-​      </span><span class="mk-radio__label">ccc</span>
+      </span>ccc
 
   </label>
 
