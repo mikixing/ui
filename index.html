@@ -10,39 +10,36 @@
 	<link rel="stylesheet" href="style/index.css">
 	<link rel="stylesheet" href="asset/style.css">
 	<style>
-		.contents {
-			position: fixed;
-			top: 50px;
-			left: 50px;
-			box-shadow: 1px 2px 15px 0px #cac4c4;
-			padding-right: 20px;
-			padding-bottom: 10px;
-		}
-		.title-item {
-			padding: 5px;
-		}
-		.title-item>a {
-			text-decoration: none;
-			color: #666;
-			font-size: 16px;
-		}
-		.contents-item {
-			margin: 5px;
-		}
-		.miki-dp {
-		    font-size: 14px;
-		    color: #666;
-		}
-		.miki-dp-child {
-		    padding-left: 20px;
-		    padding-top: 5px;
-		    cursor: pointer;
-		    display: none;
-			font-size: 16px;
-		}
-		.miki-dp-child > a {
-			text-decoration: none;
-		}
+	.contents {
+		position: fixed;
+		top: 50px;
+		left: 50px;
+		box-shadow: 1px 2px 15px 0px #cac4c4;
+		padding-right: 20px;
+		padding-bottom: 10px;
+	}
+	.title-item {
+		padding: 5px;
+	}
+	.title-item>a {
+		text-decoration: none;
+		color: #666;
+		font-size: 16px;
+	}
+	.contents-item {
+		margin: 5px;
+	}
+	.miki-dp {
+		font-size: 14px;
+		color: #666;
+	}
+	.miki-dp-child {
+		padding-left: 20px;
+		padding-top: 5px;
+		cursor: pointer;
+		display: none;
+		font-size: 16px;
+	}
 	</style>
 </head>
 <body>
@@ -52,7 +49,7 @@
                 <div style="font-size: 18px;font-weight: bold;">element-ui</div>
                 <div class="miki-dp-child miki-dp-more">
 					<div class="title-item"><a href="#radio">radio</a></div>
-					<div class="title-item"><a href="#check_box">checkBox</a></div>
+					<div class="title-item"><a href="#checkbox">checkBox</a></div>
 					<div class="title-item"><a href="#input">input</a></div>
 					<div class="title-item"><a href="#js_input-number">inputNumber</a></div>
 					<div class="title-item"><a href="#js_select">select</a></div>
@@ -60,16 +57,25 @@
 					<div class="title-item"><a href="#js_slider">slider</a></div>
 					<div class="title-item"><a href="#js_tp">timePicker</a></div>
 					<div class="title-item"><a href="#js_upload">upload</a></div>
-					<div class="title-item"><a href="#js_cp">colorPicker</a></div>
+					<!-- <div class="title-item"><a href="#js_cp">colorPicker</a></div> -->
 					<div class="title-item"><a href="#js_pagination">pagination</a></div>
 					<div class="title-item"><a href="#js_dp">dropdown</a></div>
+					<div class="title-item"><a href="#js_time_line">timeLine</a></div>
                 </div>
             </div>
+			<div class="miki-dp-child miki-dp-more">
+                <div style="font-size: 18px;font-weight: bold;">
+					<a href="#file-tree" style="text-decoration:none;color:#666">fileTree</a>
+				</div>
+            </div>
             <div class="miki-dp-child miki-dp-more">
-                <div style="font-size: 18px;font-weight: bold;">material-ui</div>
+                <div style="font-size: 18px;font-weight: bold;">
+					<a href="#material-ui" style="text-decoration:none;color:#666">material-ui</a>
+				</div>
             </div>
         </div>
 	</div>
+	<p style="text-align: center;">以下组件采用javascript实现各类组件库的视觉样式和交互效果</p>
 	<div class="mk-ui-container">
 		<div class="out">
 			<h2 id="radio">radio</h2>
@@ -191,7 +197,7 @@
 		</div>
 
 		<div class="out">
-			<h2 id="check_box">checkbox</h2>
+			<h2 id="checkbox">checkbox</h2>
 			<div class="box">
 				<h4>基础用法</h4>
 				<div class="mk-wrap type-normal gap">
@@ -505,15 +511,266 @@
 		<div id="js_slider"></div>
 		<div id="js_tp"></div>
 		<div id="js_upload"></div>
-		<div id="js_cp"></div>
+		<!-- <div id="js_cp"></div> -->
 		<div id="js_pagination"></div>
-		<div class="" style="width: 200px;height: 300px;margin-top:50px;">
-
+		<div id="js_dp" style="padding-top: 20px;"></div>
+		<div id="js_time_line"></div>
+		<div id="file-tree">
+			<div class="gap-3times"></div>
+			<h2 style="text-align:center">fileTree</h2>
+			<p style="text-align:center">模仿atom的设计及交互</p>
+			<div class="gap"></div>
+			<div class="file-tree">
+				<div class="list">
+					<div class="list-title">
+						<i class="icon-down up list-icon"></i>
+						<i class="icon-folder list-icon"></i>
+						<span class="list-text">src</span>
+					</div>
+					<div class="list">
+						<div class="list-title">
+							<i class="icon-down up list-icon"></i>
+							<i class="icon-folder list-icon"></i>
+							<span class="list-text">view</span>
+						</div>
+						<div class="list">
+							<div class="list-title">
+								<i class="icon-down up list-icon"></i>
+								<i class="icon-folder list-icon"></i>
+								<span class="list-text">login</span>
+							</div>
+							<div class="list">
+								<div class="item">
+									<i class="icon-file-text list-icon"></i>
+									<span class="list-text">login.vue</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="list">
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">app.vue.js</span>
+						</div>
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">main.js</span>
+						</div>
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">index.html</span>
+						</div>
+					</div>
+				</div>
+				<div class="list">
+					<div class="list-title">
+						<i class="icon-down up list-icon"></i>
+						<i class="icon-folder list-icon"></i>
+						<span class="list-text">build</span>
+					</div>
+					<div class="list">
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">webpack.base.js</span>
+						</div>
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">webpack.dev.js</span>
+						</div>
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">webpack.product.js</span>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<i class="icon-file-text list-icon"></i>
+					<span class="list-text">package.json</span>
+				</div>
+				<div class="list">
+					<div class="list-title">
+						<i class="icon-down up list-icon"></i>
+						<i class="icon-folder list-icon"></i>
+						<span class="list-text">dist</span>
+					</div>
+					<div class="list">
+						<div class="list-title">
+							<i class="icon-down up list-icon"></i>
+							<i class="icon-folder list-icon"></i>
+							<span class="list-text">asset</span>
+						</div>
+						<div class="list">
+							<div class="item">
+								<i class="icon-file-text list-icon"></i>
+								<span class="list-text">style.gd8fa87.css</span>
+							</div>
+						</div>
+						<div class="item">
+							<i class="icon-file-text list-icon"></i>
+							<span class="list-text">index.html</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div id="js_dp"></div>
-		<iframe id="metarial-ui" src="./material-ui/index.html" width="100%" height="600px" border=0></iframe>
+		<div class="material-ui" id="material-ui">
+			<h1>Text Field</h1>
+			<p class="description">TextField包装器组件是一个完整的表单控件，包括标签，输入和帮助文本。</p>
+			<div class="jar">
+				<form class="fit">
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >usual</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >Uncontrolled</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="usual" >Require*</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="usual" type="text" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__error">
+						<label for="error" class="jar-label__error">error</label>
+						<div class="input-field">
+							<input autocomplete="off" id="error" type="text" value="" error>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__disable">
+						<label for="disabled" class="jar-label__disabled active-disabled">disabled</label>
+						<div class="input-field">
+							<input autocomplete="off" id="disabled" type="text" value="123" disabled>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="password">password</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="password" type="password" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="read" class="active-read">read</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="read" type="text" value="read only" usual readOnly>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual jar-wrap__multiline">
+						<label for="multiline" >multiline</label>
+						<div class="input-field jar-field__usual jar-field__multiline">
+							<textarea name="" id="multiline" rows="5" cols="5" aria-invalid="false"></textarea>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual jar-wrap__placeholder">
+						<label for="withplaceholder" class="">with placeholder</label>
+						<div class="input-field jar-field__usual jar-field__placeholder">
+							<input autocomplete="off" id="withplaceholder" type="text" value="" withplaceholder usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="number" >number</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="number" type="number" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="search" >search</label>
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="search" type="search" value="" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<!-- <label for="bare" >bare</label> -->
+						<div class="input-field jar-field__usual">
+							<input autocomplete="off" id="bare" type="text" value="bare" usual>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="select" class="jar-label__select">select</label>
+						<div class="input-field jar-field__usual jar-field__select">
+							<!-- <input autocomplete="off" id="select" type="text" value="" usual> -->
+							<select name="" id="">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+							</select>
+							<div class="triangle-down"></div>
+						</div>
+					</div>
+					<div class="wrap fl jar-wrap__usual">
+						<label for="select_man" class="active-select-man_default">select_man</label>
+						<div class="input-field jar-fieldx__usual" select-man>
+							<input autocomplete="off" id="select_man" type="text" value="1" usual>
+							<div class="triangle-down"></div>
+							<div class="miki-select">
+								<div class="miki-select__item miki-select__item-active">1</div>
+								<div class="miki-select__item">2</div>
+								<div class="miki-select__item">3</div>
+								<div class="miki-select__item">4</div>
+								<!-- <div class="miki-select__item">5</div>
+								<div class="miki-select__item">6</div>
+								<div class="miki-select__item">7</div>
+								<div class="miki-select__item">8</div> -->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="gap-3times"></div>
+			<h1>Snackbar</h1>
+			<p class="description">消息条(Snackbar)通过一条消息来提供有关应用进程的简短信息-通常在屏幕底部.</p>
+			<div class="outer">
+				<div class="snackbar">
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_top_left>top_left</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_top_center>top_center</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_top_right>top_right</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_bottom_left>bottom_left</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_bottom_center>bottom_center</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_bottom_right>bottom_right</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_custom_success>custom_success</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_custom_error>custom_error</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_custom_warn>custom_warn</button>
+					</div>
+					<div class="snackbar-item-box">
+						<button class="snackbar-item" snackbar_custom_normal>custom_normal</button>
+					</div>
+					<!-- <div calss="snackbar-item-box">
+						<button class="snackbar-item" snackbar_custom_more>custom_more</button>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- <iframe id="file-tree" src="./file-tree/tree.html" width="100%" height="300px" style="border:none"></iframe> -->
+		<!-- <iframe id="metarial-ui" src="./material-ui/index.html" width="100%" height="600px" style="border:none"></iframe> -->
 	</div>
+	<script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
 	<script src="./util/index.js"></script>
 	<script src="index.js"></script>
 	<script type="text/javascript">
