@@ -10,7 +10,7 @@
 
 * 模仿atom写了fileTree
 
-* 模仿material-uiText Field以及Snackbar.
+* 模仿material-ui写了Text Field以及Snackbar.
 
 #### 用法
 
