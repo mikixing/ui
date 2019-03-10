@@ -2,7 +2,7 @@
 
 #### 写在前面
 
-工作中经常用到element-ui,mint-ui和bootstrap这些优秀的ui库,惊奇这些创造者的才华,我想象着某天也能像这些优秀的创造者一样,写出优秀的作品.于是,就有了这个ui库.所有组件均基于原生javascript实现.
+工作中经常用到element-ui,mint-ui和bootstrap这些优秀的ui库,惊奇这些创造者的才华,我想象着某天也能像这些优秀的创造者一样,写出优秀的作品.于是,就有了这个ui库.所有组件均基于原生javascript实现.查看演示请点击这里https://mikixing.github.io/ui/
 
 #### 主要内容
 
